@@ -15,8 +15,12 @@
   "dependencies": {
     "-": "^0.0.1",
     "D": "^1.0.0",
+    "express": "^5.2.1",
     "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6"
   }
 }
