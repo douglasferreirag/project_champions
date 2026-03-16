@@ -1,10 +1,6 @@
-interface PlayerModel{
+import { PlayerModel } from "../models/player-model";
 
-    id: number;
-    name: string;
-    
 
-}
 
 const database: PlayerModel[] = [
 

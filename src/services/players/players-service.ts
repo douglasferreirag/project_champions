@@ -1,4 +1,4 @@
-import * as PlayerRepository from "../../controllers/players-repository";
+import * as PlayerRepository from "../../repositories/players-repository";
 import { noContent, ok } from "../../utilidades/http-helper";
 
 
