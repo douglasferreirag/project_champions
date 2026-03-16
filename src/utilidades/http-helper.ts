@@ -8,3 +8,8 @@ export const ok = async (data: any): Promise<HttpResponse> => ({
     body: data
 }); 
 
+export const noContent = async (): Promise<HttpResponse> => ({
+    statusCode: 204,
+    body: null
+}); 
+
