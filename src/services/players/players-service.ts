@@ -1,5 +1,5 @@
 import * as PlayerRepository from "../../repositories/players-repository";
-import { noContent, ok } from "../../utilidades/http-helper";
+import * as HttpResponse from "../../utilidades/http-helper";
 
 
 export const getPlayerService = async () => {
@@ -11,15 +11,36 @@ export const getPlayerService = async () => {
 
     if (data) {
 
-       response = await ok(data);
+       response = await HttpResponse.ok(data);
 
     }else{
 
-        response = await noContent();
+        response = await HttpResponse.noContent();
 
     }
     
 
     return response ;
 
+}
+
+export const getPlayerByIdService = async (id: number) => {
+
+    // Pedir para o repositório de dados
+
+    const data = await PlayerRepository.findPlayerById(id);
+
+    let response = null;
+
+    if (data) { 
+
+         response = await HttpResponse.ok(data);
+
+    }else{  
+
+        response = await HttpResponse.noContent();
+
+    }
+
+    return response;
 }
