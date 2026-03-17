@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import * as PlayerService from "../services/players/players-service";
+import { noContent } from "../utilidades/http-helper";
 
 
 export const getPlayer = async (req: Request, res: Response) => {
@@ -23,6 +24,18 @@ export const getPlayerById = async (req: Request, res: Response) => {
 
 export const postPlayer = async (req: Request, res: Response) => {
 
-    const playerData = req.body;    
+    const bodyValue = req.body;  
+    
+    const httpResponse = await PlayerService.createPlayerService(bodyValue);
+
+    if(httpResponse) {
+
+         res.status(httpResponse.statusCode).json(httpResponse.body);
+    
+        
+    } 
+
+   
+    
 
 }

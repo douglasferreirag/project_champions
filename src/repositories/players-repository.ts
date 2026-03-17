@@ -114,3 +114,9 @@ export const findPlayerById = async (id: number) : Promise<PlayerModel | undefin
    
 
 }
+
+export const insertPlayer = async (player: PlayerModel) : Promise<void> => {
+
+     database.push(player);
+  
+}
