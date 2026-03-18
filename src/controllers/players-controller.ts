@@ -30,12 +30,24 @@ export const postPlayer = async (req: Request, res: Response) => {
 
     if(httpResponse) {
 
-         res.status(httpResponse.statusCode).json(httpResponse.body);
+        res.status(httpResponse.statusCode).json(httpResponse.body);
     
         
     } 
 
    
     
+
+}
+
+export const deletePlayer = async (req: Request, res: Response) => {
+
+    throw new Error("Function not implemented.");
+
+    const id = req.params.id;
+
+    const httpResponse = await PlayerService.deletePlayerService(Number(id));
+
+    res.status(httpResponse.statusCode).json(httpResponse.body);
 
 }

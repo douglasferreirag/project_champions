@@ -69,3 +69,9 @@ export const createPlayerService = async (player: PlayerModel) => {
    
 
 }
+
+export const deletePlayerService = async (id: number) => {
+
+    let response = null;
+
+}
