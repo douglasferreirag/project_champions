@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import * as PlayerService from "../services/players/players-service";
+import * as PlayerService from "../services/players-service";
 import { StatisticsModel } from "../models/statistics-model";
 
 
