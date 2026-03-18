@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import * as PlayerService from "../services/players/players-service";
-import { noContent } from "../utilidades/http-helper";
+
 
 
 export const getPlayer = async (req: Request, res: Response) => {
@@ -42,12 +42,17 @@ export const postPlayer = async (req: Request, res: Response) => {
 
 export const deletePlayer = async (req: Request, res: Response) => {
 
-    throw new Error("Function not implemented.");
+    let response = null;
 
-    const id = req.params.id;
+    const httpResponse = await PlayerService.deletePlayerService(Number(req.params.id));
 
-    const httpResponse = await PlayerService.deletePlayerService(Number(id));
+     if(httpResponse) {
 
-    res.status(httpResponse.statusCode).json(httpResponse.body);
+        res.status(httpResponse.statusCode).json(httpResponse.body);
+    
+        
+    } 
+
+
 
 }
