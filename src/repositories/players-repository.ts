@@ -122,13 +122,18 @@ export const insertPlayer = async (player: PlayerModel) : Promise<void> => {
   
 }
 
-export const deleteOnePlayer = async (id: number) : Promise<void> => {
+export const deleteOnePlayer = async (id: number) => {
 
     const index = database.findIndex(p => p.id === id);
 
     if (index !== -1) {
         database.splice(index, 1);
+
+        return true;
+
     }
+
+    return false;
 
     
 
