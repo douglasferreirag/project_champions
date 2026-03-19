@@ -17,6 +17,7 @@
     "cors": "^2.8.6",
     "D": "^1.0.0",
     "express": "^5.2.1",
+    "play-sound": "^1.1.6",
     "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
-    "@types/node": "^25.5.0"
+    "@types/node": "^25.5.0",
+    "@types/play-sound": "^1.1.2"
   }
 }

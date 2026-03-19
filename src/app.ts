@@ -6,6 +6,7 @@ import cors from 'cors';
 import { METHODS } from "node:http";
 
 
+
 function createApp() {
 
         const app = express();
@@ -22,12 +23,15 @@ function createApp() {
                 METHODS : ['GET', "UPDATE" ]       
         }
 
-        app.use();
+        app.use(cors());
 
         return app;
 
 
 }
+
+
+
 
 
 export default createApp;
